@@ -24,10 +24,12 @@ h1 {
 a {
   text-decoration: none;
   display: inline-block;
+  -webkit-animation: rainbow 1s ease infinite;
+          animation: rainbow 1s ease infinite;
 }
 a:hover {
-  -webkit-animation: hihi 0.5s ease alternate 2;
-          animation: hihi 0.5s ease alternate 2;
+  -webkit-animation: hihi 0.5s ease alternate 2, rainbow 1s ease infinite;
+          animation: hihi 0.5s ease alternate 2, rainbow 1s ease infinite;
 }
 
 @-webkit-keyframes hihi {
@@ -45,6 +47,52 @@ a:hover {
   }
   to {
     transform: translateX(10%);
+  }
+}
+@-webkit-keyframes rainbow {
+  0% {
+    color: #9400d3;
+  }
+  17% {
+    color: #4b0082;
+  }
+  34% {
+    color: #0000ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  67% {
+    color: #ffff00;
+  }
+  83% {
+    color: #ff7f00;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: #9400d3;
+  }
+  17% {
+    color: #4b0082;
+  }
+  34% {
+    color: #0000ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  67% {
+    color: #ffff00;
+  }
+  83% {
+    color: #ff7f00;
+  }
+  100% {
+    color: #ff0000;
   }
 }
 body {
